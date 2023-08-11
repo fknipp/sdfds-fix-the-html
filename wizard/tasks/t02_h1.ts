@@ -1,5 +1,5 @@
-import messagebox from './messagebox.ts';
-import { task } from './tasks.ts';
+import messagebox from '../messagebox.js';
+import { task } from './index.js';
 
 export default {
   condition: (d) =>

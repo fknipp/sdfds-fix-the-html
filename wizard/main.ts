@@ -1,5 +1,5 @@
 import messagebox from "./messagebox.ts";
-import tasks from "./tasks.ts";
+import tasks from "./tasks/index.ts";
 
 import "./style.css";
 import progress from "./progress.ts";
