@@ -23,8 +23,13 @@ box.addEventListener("click", () => {
   }
 });
 
-export default function messagebox({ text = "", backgroundColor = "" }): void {
-  textElement.innerText = text;
+export default function messagebox({
+  text = "",
+  html = "",
+  backgroundColor = "",
+}): void {
+  if (text) textElement.innerText = text.trim();
+  if (html) textElement.innerHTML = html.trim();
   if (backgroundColor) {
     box.style.backgroundColor = backgroundColor;
   }

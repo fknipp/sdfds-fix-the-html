@@ -2,8 +2,12 @@ import messagebox from "./messagebox.ts";
 import tasks from "./tasks.ts";
 
 import "./style.css";
+import progress from "./progress.ts";
 
-const done = tasks.filter((task) => task.condition(document)).length;
-const length = tasks.length - 1;
+const nextTask = tasks.find((task) => !task.condition(document));
+nextTask?.showMessage(document);
 
-messagebox({ text: `Done: ${done}/${length}` });
+const done = tasks.filter((task) => task.condition(document) && !task.ignoreInCounting).length;
+const total = tasks.filter(task => !task.ignoreInCounting).length;
+
+progress({done, total})
