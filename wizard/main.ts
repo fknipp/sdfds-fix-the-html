@@ -1,5 +1,9 @@
 import messagebox from "./messagebox.ts";
+import tasks from "./tasks.ts";
 
 import "./style.css";
 
-messagebox({text: "HALLO\nZeile2\nZeile3\nZeile4\nZeile5"})
+const done = tasks.filter((task) => task.condition(document)).length;
+const length = tasks.length - 1;
+
+messagebox({ text: `Done: ${done}/${length}` });
