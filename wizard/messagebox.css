@@ -1,0 +1,27 @@
+.wizard-messagebox {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: calc(100% - 6.5rem);
+    min-height: 3em;
+    padding: 0.5em 0.5em 0.5em 4em;
+    background-color: rgb(89, 231, 208);
+    border-radius: 0.5em;
+}
+
+.wizard-messagebox .wizard {
+    position: absolute;
+    left: 0.25em;
+    font-size: 200%;
+}
+
+.wizard-messagebox .close {
+    font-family: monospace;
+    line-height: 50%;
+    cursor: pointer;
+    float: right;
+}
+
+@media screen {
+    
+}

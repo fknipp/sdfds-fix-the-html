@@ -1,3 +1,5 @@
-import './style.css'
+import messagebox from "./messagebox.ts";
 
-document.body.style.background='#ccc'
+import "./style.css";
+
+messagebox({text: "HALLO\nZeile2\nZeile3\nZeile4\nZeile5"})
