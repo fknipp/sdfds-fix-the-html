@@ -17,6 +17,7 @@
 }
 
 .wizard-messagebox .close {
+  padding-left: 0.5em;
   font-family: monospace;
   line-height: 50%;
   cursor: pointer;
@@ -25,4 +26,8 @@
 
 .wizard-messagebox .text p:first-child {
   margin-top: 0;
+}
+
+.wizard-messagebox .text p:last-child {
+  margin-bottom: 0;
 }
