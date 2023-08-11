@@ -1,16 +1,16 @@
-import messagebox from '../messagebox.ts';
-import { task } from './index.ts';
+import messagebox from "../messagebox.ts";
+import { task } from "./index.ts";
 
 export default {
   condition: (d) =>
-    (d.querySelector("h1") as HTMLHeadingElement)?.textContent === "My biggest dreams",
-  showMessage(d) {
+    !!(d.querySelector("head meta[name=author]") as HTMLMetaElement)?.content,
+  showMessage() {
     messagebox({
       html: `
-<p>Hello ${(d.querySelector("head meta[name=author]") as HTMLMetaElement)?.content},</p>
-<p>you've successfully done the first task. That's fine.</p>
-<p>The next step is to fix the heading. Read the comment and find the proper tag.</p>
-<p>Save the file after fixing it.</p>`,
+<p>Hello, I'm Holly, your personal wizard for this exercise.</p>
+<p>I'd like to know who you are.</p>
+<p>Please enter your name in the <b>meta</b> tag for the <b>author</b>. You'll find it in the <b>head</b> section of <i>index.html</i>.
+<p>Save the file afterwards.</p>`,
     });
   },
 } as task;
