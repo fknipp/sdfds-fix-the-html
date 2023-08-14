@@ -3,7 +3,7 @@ import { task } from "./index.js";
 
 export default {
   condition: (d) =>
-    d.querySelectorAll("table tr").length === 4,
+    d.querySelectorAll("table tr td,table tr th").length > 1,
   showMessage() {
     messagebox({
       html: `

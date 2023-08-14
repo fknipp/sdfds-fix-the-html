@@ -8,6 +8,7 @@ import t12_blockquote from "./t12_blockquote.js";
 import t20_table from "./t20_table.js";
 import t21_table_td from "./t21_table_td.js";
 import t22_table_thtd from "./t22_table_thtd.js";
+import t23_table_thtd from "./t23_table_thtd.js";
 import t30_footer from "./t30_footer.js";
 import t31_h2 from "./t31_h2.js";
 import t32_b from "./t32_b.js";
@@ -31,6 +32,7 @@ const tasks: task[] = [
   t20_table,
   t21_table_td,
   t22_table_thtd,
+  t23_table_thtd,
   t30_footer,
   t31_h2,
   t32_b,
